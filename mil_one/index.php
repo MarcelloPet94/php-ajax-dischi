@@ -1,7 +1,5 @@
 <?php
 include './data/data.php';
-echo $database[0]["title"];
-/* var_dump($database) */
 
 ?>
 
