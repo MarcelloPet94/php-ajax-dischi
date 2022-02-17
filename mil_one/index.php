@@ -19,15 +19,22 @@ echo $database[0]["title"];
 <nav><h1>navigazione</h1></nav>
 <main>
     <div class="contain">
-        <div class="thumb">
-            <div class="img_cont">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/51sBr4IWDwL.jpg" alt="">
-            </div>
-            <div class="text_cont">
-                <h3>album</h3>
-                <p>Author</p>
-            </div>
-        </div>
+
+        <?php
+        foreach( $database as $value )
+        {
+        echo "<div class='thumb'>" . 
+                "<div class='img_cont'>" . 
+                    "<img src=" . $value["poster"] . " >" .
+             "</div>" . 
+            "<div class='text_cont'>" . 
+                "<h3>" . $value["title"] . "</h3>" . 
+                "<p>" . $value["author"] . "</p>" . 
+            "</div>" .
+        "</div>";
+        }
+        ?>
+
     </div>
 </main>
 
